@@ -3,20 +3,22 @@
 		<title>College Matchup</title>
 			
     
-           
+       
  	</head>
- 	<div style="border:1px solid black;width:1350px;height:1000px;overflow:scroll;overflow-y:scroll;overflow-x:hiddn;">
-
- 	<link rel="stylesheet" type="text/css" href="app.css">
+ 	<div style="border:1px solid black;width:1350px;height:1800px;overflow:scroll;overflow-y:scroll;overflow-x:hiddn;">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+    <script src="js/holder.js"></script>
+ 	  
  	<body> <h1><center> College Matchup</center></h1>
  		<nav><center>
  		<ul>
       <li><a href="/">Home</a></li>
-      <li><a href="/about">About Us</a>
+      <li><a href="/about">About Us </a>
         </li>
        <li><a href="/contact "> Contact Us</a></li>
        <li><a href="/support">Support</a></li> </center></nav>
-
+       
        <h3><center> Welcome to college Matchup where we give the right colleges for you. Lets get started!</center></h3>
        <p> <center>please type your email address to save your progress</center></p><br>
        	<center><input type = "textbox"><center><br>
@@ -38,8 +40,8 @@
        </form>
         <h2> <center> Contact Us</center></h2>
         <h3><form name= "name" action="/submit" method="POST">	<center></center>	
-		Name:<input type="text" name = "user"><br>
-		Email:<input type="text" name = "email"><br>
+		Name:<input type="text" name = "user"><br><br>
+		Email:<input type="text" name = "email"><br><br> 
 		
 		Your Message:  <textarea rows="10" cols="30">
 
@@ -47,6 +49,19 @@
 		
 		<input type="submit" value = "submit"></center>
 		</form></h3>
+
+
+      <h2> <center> Support</center></h2>
+
+      <h3> <form name= "name" action="/submit" method="POST"> <center>
+      </center>
+    Do you recommand this app for other people? <select name = "options">
+      <option value= "Yes"> Yes</option>
+      <option value = "No">No</option></select><br><br>
+      What problems do you have concerning the app? <center><textarea rows="10" cols="30"></textarea><br><br>
+      What would you change/add in this app?<center><textarea rows="10" cols="30"></textarea><br>
+      <input type="submit" Value = "Submit"></center>
+  </form></h3>
 
 
 
