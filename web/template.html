@@ -1,42 +1,109 @@
 <html>
-	
+  <title>College Matchup
+  	
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">	
 	<head>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 
-    	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    	<!-- Uncoment this when it is time for deployment. and comment the local jQuery File <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>  -->
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<!-- Uncoment this when it is time for deployment. and comment the local jQuery File <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>  -->
 
-    	<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.js"></script>
 		<script type="text/javascript" src="js/holder.js"></script>
 
-	</head>
+		</head>
 
-	<body>
+		<body>
 
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <!-- We use the fluid option here to avoid overriding the fixed width of a normal container within the narrow content columns. -->
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-6">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Brand</a>
-        </div>
+	    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	      <!-- We use the fluid option here to avoid overriding the fixed width of a normal container within the narrow content columns. -->
+	      <div class="container-fluid">
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-6">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          <a class="navbar-brand" href="#">College Matchup</a>
+	        </div>
 
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div>
-    </nav>
+	        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
+	          <ul class="nav navbar-nav">
+	            <li class="active"><a href="#">Home</a></li>
+	            <li><a href="#About">About Us</a></li>
+	            <li><a href="#Contact">Contact</a></li>
+	             <li><a href="#Support">Support</a></li>
+	          </ul>
+	        </div><!-- /.navbar-collapse -->
+	      </div>
+	    </nav><br> <br>
 
 
-	</body>
-</html>
+
+
+	    <div class="jumbotron">
+  <h1>College Matchup</h1>
+  <form name= "name" action="/submit" method="POST">
+  <center><p>Welcome to College Matchup where we give the right 
+  	colleges for you.<br> Lets get started!</p>
+  <p><a class="btn btn-primary btn-lg" role="button">Start</a></p></center>
+</div><br>
+<div class="jumbotron">
+	
+	<h1> About Us</h1>
+	<center>
+		
+	
+
+
+<p> This website is designed to help high school students<br> to find the match of colleges based on their GPA and SAT Scores.</p></center>
+</form>
+	</div>
+
+
+	<div class="jumbotron">
+		
+		<h1>Contact</h1><center> 
+		<form name= "name" action="/submit" method="POST">	<center></center>	
+		Name: <input type="text" class="form-control-sm"><br><br>
+		Email: <input type="text" class="form-control-sm"><br><br> 
+		
+		Your Message: <br><textarea rows="10" cols="30">
+
+		</textarea><br>
+		<a class="btn btn-primary btn-lg" role="button">Submit</a></p>
+		</center>
+		</form></div><br>
+
+
+	<div class="jumbotron">
+		
+		<h1>Support</h1><center> 
+		<form name= "name" action="/submit" method="POST">	<center></center>	
+		 </center><br><br>
+  <center>Do you recommand this app for other people? <select name = "options">
+      <option value= "Yes"> Yes</option>
+      <option value = "No">No</option></select><br>
+          
+        </ul><br><br>
+      </center><!-- /btn-group -->
+
+		<center> What problems do you have concerning the app?<textarea rows = "10" cols="30"></textarea></center><br><br>
+		 
+		<center>What would you change/add in this app? <textarea rows="10" cols="30">
+
+		</textarea></center>
+		<center><a class="btn btn-primary btn-lg" role="button">Submit</a>
+		</center>
+		</form></div><br>
+		</div>
+
+
+
+
+
+		</body>
+	</html>
