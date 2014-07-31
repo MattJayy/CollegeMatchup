@@ -1,10 +1,10 @@
 <html>
-<title>
-</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<head>
-
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <title>College Matchup
+  	
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<!-- Uncoment this when it is time for deployment. and comment the local jQuery File <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>  -->
@@ -12,9 +12,14 @@
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.js"></script>
 		<script type="text/javascript" src="js/holder.js"></script>
-</head>
-<body>
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+		</head>
+
+		<body>
+
+	   <div class="row">
+  <div class="col-xs-12 col-md-8"> 
+	    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 	      <!-- We use the fluid option here to avoid overriding the fixed width of a normal container within the narrow content columns. -->
 	      <div class="container-fluid">
 	        <div class="navbar-header">
@@ -37,66 +42,17 @@
 	          </ul>
 	        </div><!-- /.navbar-collapse -->
 	      </div>
-	    </nav><br> <br>
-
-
-	    <!-- no form tag -->
-
-<div class="container" ><a id ="About"></a><a id="Contact"></a>
-	<a id="Contact"></a> <a id="Contact"></a> <a id="Support"></a>
-	<div class="col-md-6 col-md-offset-3">
-	    <h1>College Matchup <span class="label label-default"></span></h1><br><br>
-	    
-	    <div class="input-group">GPA:
-   <input type="text-sm" class="form-control" required >
-   <div class="input-group">SAT Score:
-   <input type="text-sm" class="form-control">
-  
-</div><br>
-  
-       <div class="btn-group">
-  <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
-    School Type <span class="caret" required></span>
-  </button>
-  <ul class="dropdown-menu" role="menu">
-    <li><a href="#">Public</a></li>
-    <li><a href="#">Private</a></li>
-    
-  
-  </ul>
-</div> 
-      <br><br>
-      <div class="btn-group">
-  <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
-    School Size <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" role="menu">
-    <li><a href="#">Small</a></li>
-    <li><a href="#">Medium</a></li>
-    <li><a href="#">Large</a></li>
-  
-  </ul>
- </div>
+	    </nav></div><br> <br>
 
 
 
-
-       
-
-
-
-
-
-
-<br><br>
-<br><a href="result.html" class="btn btn-primary btn-lg" role="button">Next</a>
-</div>
-</div>
-
-</body>
+	    <div class="col-md-6 col-md-offset-3">
+  		<div class="jumbotron">
+  			<h1>Thank You</h1>
+  				<form name= "name" action="/submit" method="POST">
+  				<center><p>Thank you for contacting us. An email will come to you shortly.</p>
 
 
+	   </body>
+	   </html>
 
-
-
-</html>

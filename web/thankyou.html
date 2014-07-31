@@ -1,6 +1,10 @@
 <html>
-<head>
-<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <title>College Matchup
+  	
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<!-- Uncoment this when it is time for deployment. and comment the local jQuery File <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>  -->
@@ -9,10 +13,13 @@
 		<script type="text/javascript" src="js/bootstrap.js"></script>
 		<script type="text/javascript" src="js/holder.js"></script>
 
-</head>
+		</head>
 
-<body>
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<body>
+
+	   <div class="row">
+  <div class="col-xs-12 col-md-8"> 
+	    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 	      <!-- We use the fluid option here to avoid overriding the fixed width of a normal container within the narrow content columns. -->
 	      <div class="container-fluid">
 	        <div class="navbar-header">
@@ -32,29 +39,21 @@
 	            <li><a href="template.html#Contact">Contact</a></li>
 	             <li><a href="template.html#Support">Support</a></li>
 	             <li><a href="signup.html">Sign Up</a></li>
-	          </ul>
+	          </ul> 
 	        </div><!-- /.navbar-collapse -->
 	      </div>
-	    </nav><br> <br>
-	    
+	    </nav></div><br> <br>
+
+
+
 	    <div class="col-md-6 col-md-offset-3">
   		<div class="jumbotron">
-	    <h1>Results <span class="label label-default"></span></h1><br><br>
-
-	    <p> Based on what you've selected, here is a list of colleges for you.<br> For more information, click a college to go to their homepage.</p><br>
-	    <center><a href="template.html" class="btn btn-primary btn-lg" role="button">Go Home</a></center>
-	</div>
-
+  			<h1>Thank You</h1>
+  				<form name= "name" action="/submit" method="POST">
+  				<center><p>Thank you for contacting us. An email will come to you shortly.</p><br>
+  					<a href="template.html" class="btn btn-primary btn-lg" role="button">Go Home</a>
 
 
+	   </body>
+	   </html>
 
-
-
-
-
-</body>
-
-
-
-
-</html>
