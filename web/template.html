@@ -86,15 +86,16 @@
 	<div class="jumbotron" id="Contact">
 		
 		<h1>Contact</h1> 
-		<form action="MAILTO:matthew@labs.hiddengeniusproject.org" method="post" enctype="text/plain">
+		<form action="thankyou.html" method="post" enctype="text/plain">
 		<form name= "name" action="/submit" method="POST">		
-		Name: <input type="text" class="form-control-sm"><br><br>
-		Email: <input type="text" class="form-control-sm"><br><br> 
+		Name: <input type="text" class="form-control-sm" required><br><br>
+		Email: <input type="text" class="form-control-sm" required><br><br> 
 		
-		Your Message: <br><textarea class = "form-control" rows="10" cols="20">
+		Your Message: <br><textarea class = "form-control" rows="10" cols="20" required>
 
 		</textarea><br><br>
-		<a href ="thankyou.html" class="btn btn-primary btn-lg" role="button">Submit</a></p>
+		<button type="submit" class="btn btn-default" >Submit</button>
+			
 		
 		</form></div></div>
 		<br></div>
@@ -104,7 +105,7 @@
 	<div class="jumbotron" id="Support">
 		
 		<h1>Support</h1> 
-		<form name= "name" action="/submit" method="POST">		
+		<form action="thankyou.html">		
 		 <br><br>
    <div class="btn-group">
   <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
@@ -116,12 +117,13 @@
         </ul></div><br><br>
       <!-- /btn-group -->
 
-		What problems do you have concerning the app?<br><textarea class ="form-control" rows = "10" cols="20"></textarea><br><br>
+		What problems do you have concerning the app?<br><textarea class ="form-control" rows = "10" cols="20" required></textarea><br><br>
 		 
-		What would you change/add in this app?<br> <textarea class="form-control" rows="10" cols="20">
+		What would you change/add in this app?<br> <textarea class="form-control" rows="10" cols="20" required>
 
 		</textarea><br><br>
-		<a href ="thankyou.html" class="btn btn-primary btn-lg" role="button">Submit</a>
+		<button type="submit" class="btn btn-default" >Submit</button>
+		
 		
 		</form></div><br>
 		</div>
