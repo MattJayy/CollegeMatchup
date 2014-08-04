@@ -1,12 +1,9 @@
 import json
-from flask import Flask,request,render_template
+from flask import Flask,request
 app = Flask(__name__)
 
 
 
-@app.route('/')
-def test_server():
-	return "helloworld"
 
 
 @app.route('/contact', methods=['POST'])
@@ -20,12 +17,41 @@ def handle_contact_form():
 	return contact_json
 
 
+@app.route('/support',methods =['POST'])
+def handle_support_form():
+	problem = request.form['problem_sf']
+	change = request.form['change_sf']
+
+	support_dict = {'problem': problem, 'change':change}
+	support_json =json.dumps(support_dict )
+	return support_json
+
+@app.route('/GPA', methods=['POST'])
+def handle_gpa_form():
+	gpa = request.form['gpa_gf']
+	sat = request.form['sat_gf']
+	# school_type = request.form['type_gf']
+	# size = request.form['size_gf']
+
+#	gpa_dict = {'gpa': gpa,'sat': sat, 'type': school_type,'size': size}
+	gpa_dict = {'gpa': gpa,'sat': sat}
+	gpa_json=json.dumps(gpa_dict)
+	return gpa_json
 
 
 
+@app.route('/signup', methods=['POST'])
+def handle_Signup_form():
+	fullname= request.form['name_sf']
+	email= request.form['email_sf']
+	month = request.form['month_sf']
+	day = request.form['day_sf']
+	year = request.form['year_sf']
 
-
-
+	signup_dict ={'fullname':fullname,'email':email,'month':month,'day':day,'year':year}
+	#signup_dict={'fullname' : fullname,'email' : email}
+	signup_json=json.dumps(signup_dict)
+	return signup_json
 
 
 
