@@ -18,7 +18,7 @@ def handle_contact_form():
 	fo = open("input.txt")
 	fo.write(contact_json)
 	fo.write('\n')
-	fo.close
+	fo.close()
 	return contact_json
 
 @app.route('/support',methods =['POST'])
