@@ -15,7 +15,7 @@ def handle_contact_form():
 	contact_dict = {'name':name,'mail': mail, 'message':message}
 	contact_json = json.dumps(contact_dict)
 
-	fo = open("input.txt")
+	fo = open("input.txt","a+")
 	fo.write(contact_json)
 	fo.write('\n')
 	fo.close()
@@ -29,7 +29,7 @@ def handle_support_form():
 	support_dict = {'problem': problem, 'change':change}
 	support_json =json.dumps(support_dict)
 	
-	fo = open("input.txt")
+	fo = open("input.txt","a+")
 	fo.write(support_json)
 	fo.write('\n')
 	fo.close()
@@ -46,7 +46,7 @@ def handle_gpa_form():
 	gpa_dict = {'gpa': gpa,'sat': sat}
 	gpa_json=json.dumps(gpa_dict)
 	
-	fo = open("input.txt")
+	fo = open("input.txt", "a+")
 	
 	fo.write(gpa_json)
 	fo.write('\n')
