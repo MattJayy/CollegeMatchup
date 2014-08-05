@@ -14,8 +14,12 @@ def handle_contact_form():
 
 	contact_dict = {'name':name,'mail': mail, 'message':message}
 	contact_json = json.dumps(contact_dict)
-	return contact_json
 
+	fo = open("input.txt")
+	fo.write(contact_json)
+	fo.write('\n')
+	fo.close
+	return contact_json
 
 @app.route('/support',methods =['POST'])
 def handle_support_form():
@@ -23,7 +27,12 @@ def handle_support_form():
 	change = request.form['change_sf']
 
 	support_dict = {'problem': problem, 'change':change}
-	support_json =json.dumps(support_dict )
+	support_json =json.dumps(support_dict)
+	
+	fo = open("input.txt")
+	fo.write(support_json)
+	fo.write('\n')
+	fo.close()
 	return support_json
 
 @app.route('/GPA', methods=['POST'])
@@ -36,7 +45,14 @@ def handle_gpa_form():
 #	gpa_dict = {'gpa': gpa,'sat': sat, 'type': school_type,'size': size}
 	gpa_dict = {'gpa': gpa,'sat': sat}
 	gpa_json=json.dumps(gpa_dict)
+	
+	fo = open("input.txt")
+	
+	fo.write(gpa_json)
+	fo.write('\n')
+	fo.close()
 	return gpa_json
+
 
 
 
@@ -49,10 +65,23 @@ def handle_Signup_form():
 	year = request.form['year_sf']
 
 	signup_dict ={'fullname':fullname,'email':email,'month':month,'day':day,'year':year}
-	#signup_dict={'fullname' : fullname,'email' : email}
 	signup_json=json.dumps(signup_dict)
+	
+	fo = open("input.txt", 'a+')
+	fo.write(signup_json)
+	fo.write('\n')
+	fo.close()
 	return signup_json
 
+
+
+
+
+
+
+
+
+	
 
 
 
