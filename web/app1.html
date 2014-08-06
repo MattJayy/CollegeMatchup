@@ -52,35 +52,25 @@
 				<div class="input-group">GPA:
 					<input type="text" class="form-control" name ="gpa_gf" required >
 					<div class="input-group">SAT Score:
-						<input type="text" class="form-control "name ="sat_gf" >
+						<input type="text" class="form-control "name ="sat_gf" ><br><br>
 
-					</div><br>
+					
 
-					<div class="btn-group">
-						<button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown" required>
-							School Type <span class="caret" name ="type_gf" required></span>
-						</button>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="#">Public</a></li>
-							<li><a href="#">Private</a></li>
-						</ul>
-					</div> 
+					
+							School Type <br>
+							<select name="type_gf" class="form-control" required>
+								<option>Public</option>
+								<option>Private</option>
+							</select>
+					 
 					<br><br>
-					<div class="btn-group">
-						<button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown"  required>
-							School Size <span class="caret" name="size_gf" ></span>
-						</button>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="#">Small</a></li>
-							<li><a href="#">Medium</a></li>
-							<li><a href="#">Large</a></li>
-
-						</ul>
-					</div>
-
-
-
-
+							School Size <br>
+							<select  name="size_gf" class="form-control" required>
+								<option>Small</option>
+								<option>Medium</option>
+								<option>Large</option>
+							</select>
+						
 					<br><br>
 					<br><button type="submit" class="btn btn-default" >Next</button>
 				</form>

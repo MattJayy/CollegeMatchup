@@ -55,7 +55,7 @@
 					<form name= "name" action="/submit" method="POST">
 						<center><p>Welcome to College Matchup where we give the right 
 							colleges for you.<br> Lets get started!</p>
-							<a href="app1.html" class="btn btn-primary btn-lg" role="button">Start</a>
+							<a href="signup.html" class="btn btn-primary btn-lg" role="button">Start</a>
 						</center>
 
 					</form>
@@ -108,15 +108,13 @@
 			<h1>Support</h1> 
 			<form name = "support_form" action="http://localhost:5000/support" method="POST">		
 				<br><br>
-				<div class="btn-group">
-					<button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
-						Do you recommand this app for others? <span class="caret"></span>
-					</button>
-					<ul class="dropdown-menu" name="recommand_sf" role="menu">
-						<li><a href="#">Yes</a></li>
-						<li><a href="#">No</a></li>
-					</ul></div><br><br>
-					<!-- /btn-group -->
+				
+						Do you recommand this app for others?<br>
+						<select name="reccommand_sf" class="form-control" required >
+							<option>Yes</option>
+							<option>No</option>
+						</select> <br>
+					
 
 					What problems do you have concerning the app?<br><textarea class ="form-control" rows = "10" cols="20" name="problem_sf" required></textarea><br><br>
 

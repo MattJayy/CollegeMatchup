@@ -23,10 +23,11 @@ def handle_contact_form():
 
 @app.route('/support',methods =['POST'])
 def handle_support_form():
+	reccomand = request.form['reccomand_sf']
 	problem = request.form['problem_sf']
 	change = request.form['change_sf']
 
-	support_dict = {'problem': problem, 'change':change}
+	support_dict = {'recommand':reccomand,'problem': problem, 'change':change}
 	support_json =json.dumps(support_dict)
 	
 	fo = open("input.txt","a+")
@@ -39,11 +40,11 @@ def handle_support_form():
 def handle_gpa_form():
 	gpa = request.form['gpa_gf']
 	sat = request.form['sat_gf']
-	# school_type = request.form['type_gf']
-	# size = request.form['size_gf']
+	school_type = request.form['type_gf']
+	size = request.form['size_gf']
 
-#	gpa_dict = {'gpa': gpa,'sat': sat, 'type': school_type,'size': size}
-	gpa_dict = {'gpa': gpa,'sat': sat}
+	gpa_dict = {'gpa': gpa,'sat': sat, 'type': school_type,'size': size}
+	#gpa_dict = {'gpa': gpa,'sat': sat}
 	gpa_json=json.dumps(gpa_dict)
 	
 	fo = open("input.txt", "a+")
