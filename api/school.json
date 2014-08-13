@@ -1,0 +1,142 @@
+[
+    {
+        "schoolName": "School Name",
+        "gpa": "GPA",
+        "sat": "SAT",
+        "schoolSize": "# of Students",
+        "schoolType": "School Type"
+    },
+    {
+        "schoolName": "Alabama State University",
+        "gpa": 2,
+        "sat": 1200,
+        "schoolSize": "Medium",
+        "schoolType": "Public"
+    },
+    {
+        "schoolName": "Baylor University",
+        "gpa": 2.5,
+        "sat": 1130,
+        "schoolSize": "Large",
+        "schoolType": "Private"
+    },
+    {
+        "schoolName": "Boise State University",
+        "gpa": 2.5,
+        "sat": 1200,
+        "schoolSize": "Large",
+        "schoolType": "Public"
+    },
+    {
+        "schoolName": "CSULA",
+        "gpa": 2,
+        "sat": 1300,
+        "schoolSize": "Large",
+        "schoolType": "Public"
+    },
+    {
+        "schoolName": "Columbia",
+        "gpa": 3,
+        "sat": 1400,
+        "schoolSize": "Medium",
+        "schoolType": "Private"
+    },
+    {
+        "schoolName": "Dillard University",
+        "gpa": 2.5,
+        "sat": 1300,
+        "schoolSize": "Small",
+        "schoolType": "Private"
+    },
+    {
+        "schoolName": "Harvard",
+        "gpa": 4,
+        "sat": 2100,
+        "schoolSize": "Medium",
+        "schoolType": "Private"
+    },
+    {
+        "schoolName": "Howard",
+        "gpa": 2.5,
+        "sat": 1000,
+        "schoolSize": "Large",
+        "schoolType": "Private"
+    },
+    {
+        "schoolName": "Idaho State University",
+        "gpa": 2.5,
+        "sat": 1230,
+        "schoolSize": "Large",
+        "schoolType": "Public"
+    },
+    {
+        "schoolName": "Jackson State University",
+        "gpa": 3,
+        "sat": 1300,
+        "schoolSize": "Medium",
+        "schoolType": "Public"
+    },
+    {
+        "schoolName": "Juilliard",
+        "gpa": 3.5,
+        "sat": 1650,
+        "schoolSize": "Small",
+        "schoolType": "Private"
+    },
+    {
+        "schoolName": "Kentucky State University",
+        "gpa": 2.5,
+        "sat": 1290,
+        "schoolSize": "Small",
+        "schoolType": "Public"
+    },
+    {
+        "schoolName": "Loyola University",
+        "gpa": 2.75,
+        "sat": 1100,
+        "schoolSize": "Small",
+        "schoolType": "Private"
+    },
+    {
+        "schoolName": "Lynn University",
+        "gpa": 2.8,
+        "sat": 1320,
+        "schoolSize": "Small",
+        "schoolType": "Private"
+    },
+    {
+        "schoolName": "Michigan State University",
+        "gpa": 3.4,
+        "sat": 1040,
+        "schoolSize": "Large",
+        "schoolType": "Public"
+    },
+    {
+        "schoolName": "Morgan State University",
+        "gpa": 3,
+        "sat": 1000,
+        "schoolSize": "Medium",
+        "schoolType": "Public"
+    },
+    {
+        "schoolName": "Nevada State University ",
+        "gpa": 2,
+        "sat": 1100,
+        "schoolSize": "Small",
+        "schoolType": "Public"
+    },
+    {
+        "schoolName": "New York University",
+        "gpa": 3,
+        "sat": 1500,
+        "schoolSize": "Large",
+        "schoolType": "Private"
+    },
+    {
+        "schoolName": "Northwestern University",
+        "gpa": 2.2,
+        "sat": 1200,
+        "schoolSize": "Medium",
+        "schoolType": "Private"
+    }
+]

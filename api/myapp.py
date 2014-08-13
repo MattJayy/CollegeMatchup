@@ -1,6 +1,47 @@
 import json
-from flask import Flask,request
-app = Flask(__name__)
+from flask import Flask,request,render_template
+ 
+app = Flask(__name__, static_url_path='')
+
+
+
+
+
+
+def list_schools(gpa,sat=None):
+	# open the json file to read only, 
+	# read all context in the file stored into str_ variable 
+	sat_ = 0
+	if sat == None or sat == '' :
+		sat_ = float(2400)
+	else:
+		sat_ = float(sat)	
+	fo = open('school.json','r')
+	schools_json = json.load(fo)
+	fo.close()
+	gpa_ = float(gpa)
+	
+	# made str_ into a json data type (list of dictionaries)
+	new_list=[]
+	for x in schools_json:
+		if x['schoolType']=="Public"and x['gpa'] <= gpa_ and x['sat'] <= sat_:
+			new_list.append(x)
+
+		else:
+			if x['gpa'] <= gpa_ and x['sat'] <= sat_ and x['schoolType']=="Private": 
+
+			
+				new_list.append(x)
+
+	print "\t\tcount of schools with gpa <= %f is %d" %(gpa_, len(new_list))		
+	return new_list	
+
+
+
+
+		
+
+
 
 
 
@@ -15,7 +56,7 @@ def handle_contact_form():
 	contact_dict = {'name':name,'mail': mail, 'message':message}
 	contact_json = json.dumps(contact_dict)
 
-	fo = open("input.txt","a+")
+	fo = open("contact_input.txt","a+")
 	fo.write(contact_json)
 	fo.write('\n')
 	fo.close()
@@ -30,7 +71,7 @@ def handle_support_form():
 	support_dict = {'recommand':reccomand,'problem': problem, 'change':change}
 	support_json =json.dumps(support_dict)
 	
-	fo = open("input.txt","a+")
+	fo = open("support_input.txt","a+")
 	fo.write(support_json)
 	fo.write('\n')
 	fo.close()
@@ -46,15 +87,17 @@ def handle_gpa_form():
 	gpa_dict = {'gpa': gpa,'sat': sat, 'type': school_type,'size': size}
 	#gpa_dict = {'gpa': gpa,'sat': sat}
 	gpa_json=json.dumps(gpa_dict)
-	
+
+	print("\t\t\t %s ") % gpa_dict	
 	fo = open("input.txt", "a+")
 	
 	fo.write(gpa_json)
 	fo.write('\n')
-	fo.close()
-	return gpa_json
-
-
+	fo.close()		
+	new_list = list_schools(gpa,sat)
+	
+	return render_template('template_table.html', schools=new_list)
+	
 
 
 @app.route('/signup', methods=['POST'])
@@ -68,22 +111,11 @@ def handle_Signup_form():
 	signup_dict ={'fullname':fullname,'email':email,'month':month,'day':day,'year':year}
 	signup_json=json.dumps(signup_dict)
 	
-	fo = open("input.txt", 'a+')
+	fo = open("signup_input.txt", 'a+')
 	fo.write(signup_json)
 	fo.write('\n')
 	fo.close()
 	return signup_json
-
-
-
-
-
-
-
-
-
-	
-
 
 
 
