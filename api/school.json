@@ -3,7 +3,7 @@
         "schoolName": "School Name",
         "gpa": "GPA",
         "sat": "SAT",
-        "schoolSize": "# of Students",
+        "schoolSize": "School Size",
         "schoolType": "School Type"
     },
     {

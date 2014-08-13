@@ -24,14 +24,12 @@ def list_schools(gpa,sat=None):
 	# made str_ into a json data type (list of dictionaries)
 	new_list=[]
 	for x in schools_json:
-		if x['schoolType']=="Public"and x['gpa'] <= gpa_ and x['sat'] <= sat_:
+		if x['schoolType']=="Public"and x['gpa'] <= gpa_ and x['sat'] <= sat_  and x['schoolSize'] =="Medium":
 			new_list.append(x)
 
-		else:
-			if x['gpa'] <= gpa_ and x['sat'] <= sat_ and x['schoolType']=="Private": 
-
-			
-				new_list.append(x)
+		
+		#elif x['gpa'] <= gpa_ and x['sat'] <= sat_ and x['schoolType']=="Private": 
+			#new_list.append(x)
 
 	print "\t\tcount of schools with gpa <= %f is %d" %(gpa_, len(new_list))		
 	return new_list	

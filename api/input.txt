@@ -93,3 +93,8 @@
 {"size": "None", "type": "Public", "gpa": "2.5", "sat": ""}
 {"size": "None", "type": "Public", "gpa": "2.5", "sat": ""}
 {"size": "None", "type": "Public", "gpa": "2.5", "sat": ""}
+{"size": "None", "type": "Public", "gpa": "3.0", "sat": "1200"}
+{"size": "None", "type": "Public", "gpa": "3.0", "sat": "1200"}
+{"size": "None", "type": "Public", "gpa": "3.0", "sat": "1200"}
+{"size": "Medium", "type": "Public", "gpa": "3.5", "sat": "1500"}
+{"size": "Medium", "type": "Public", "gpa": "2.5", "sat": "1200"}
