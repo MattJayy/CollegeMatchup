@@ -8,24 +8,60 @@ app = Flask(__name__, static_url_path='')
 
 
 
-def list_schools(gpa,sat=None):
+def list_schools(gpa, sat=None, school_size= None, school_type= None):
 	# open the json file to read only, 
 	# read all context in the file stored into str_ variable 
+	fo = open('school.json','r')
+	schools_json = json.load(fo)
+	fo.close()
+
+	#
+	gpa_ = float(gpa)
+
+	
+	# 
 	sat_ = 0
 	if sat == None or sat == '' :
 		sat_ = float(2400)
 	else:
 		sat_ = float(sat)	
-	fo = open('school.json','r')
-	schools_json = json.load(fo)
-	fo.close()
-	gpa_ = float(gpa)
+
+	#
+	checkSize = False
+	size_ = str(school_size)
+	if size_ != 'None':
+		checkSize = True
 	
+
+	#setting checkType = False
+	checkType = False
+	if school_type != 'None':
+		checkType = True
+
+	print "checkSize = %s" % (checkSize)
+	print "size = -%s-, type = %s " %(size_,type(size_))
+
 	# made str_ into a json data type (list of dictionaries)
 	new_list=[]
 	for x in schools_json:
-		if x['schoolType']=="Public"and x['gpa'] <= gpa_ and x['sat'] <= sat_  and x['schoolSize'] =="Medium":
-			new_list.append(x)
+		if x['gpa'] <= gpa_ and x['sat'] <= sat_ :
+#			print "The new list will be %s" %(x)
+			if checkSize == True:
+				if size_ == x['schoolSize']:
+#					print "checkSize = True (sizeMatch =Yes) %s" %(x)
+					if checkType ==True:
+						if school_type == x['schoolType']:
+#							print "checkType = True (typeMatch =Yes) %s" %(x)
+							new_list.append(x)	
+			else:
+				if checkType == True:
+					print "checkSize = False and checkType = True %s" %(x)
+					if school_type == x['schoolType']: 
+						print "checkSize = False (TypeMatch =Yes) %s" %(x)
+
+						new_list.append(x)
+				else:
+					new_list.append(x)
 
 		
 		#elif x['gpa'] <= gpa_ and x['sat'] <= sat_ and x['schoolType']=="Private": 
@@ -91,8 +127,11 @@ def handle_gpa_form():
 	
 	fo.write(gpa_json)
 	fo.write('\n')
-	fo.close()		
-	new_list = list_schools(gpa,sat)
+	fo.close()	
+	new_list = []
+
+	print " gpa = %s, sat= %s, size = %s ,school_type = %s" %(gpa,sat,size,school_type)
+	new_list = list_schools(gpa,sat,size,school_type)
 	
 	return render_template('template_table.html', schools=new_list)
 	
