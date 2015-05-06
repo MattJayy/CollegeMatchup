@@ -29,10 +29,10 @@
 
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
 					<ul class="nav navbar-nav">
-						<li class="active"><a href="template.html">Home</a></li>
-						<li><a href="#About">About Us</a></li>
-						<li><a href="#Contact">Contact</a></li>
-						<li><a href="#Support">Support</a></li>
+						<li class="active"><a href="http://localhost:8888/CollegeMatchup/web/template.html">Home</a></li>
+						<li><a href="localhost:8888/CollegeMatchup/web/template.html#About">About Us</a></li>
+						<li><a href="localhost:8888/CollegeMatchup/web/template.html#Contact">Contact</a></li>
+						<li><a href="localhost:8888/CollegeMatchup/web/template.html#Support">Support</a></li>
 
 					</ul>
 				</div><!-- /.navbar-collapse -->
@@ -49,6 +49,10 @@
                         <th>SAT</th>
                         <th>School Size</th>
                         <th>School Type</th>
+                        <th>ACT</th>
+                        <th>Average SAT</th>
+                        <th>Average GPA</th>
+                        <th>Average ACT</th>
                     </thead>
 
                         
@@ -56,11 +60,15 @@
 
 	{% for entry in schools %}
 		<tr>
-			<td>{{entry.schoolName}}</td>
+			<td>{{entry.collegeName}}</td>
 			<td>{{entry.gpa}}</td>
 			<td>{{entry.sat}}</td>
 			<td>{{entry.schoolSize}}</td>
 			<td>{{entry.schoolType}}</td>
+			<td>{{entry.act}}</td>
+			<td>{{entry.averageSat}}</td>
+			<td>{{entry.averageGpa}}</td>
+			<td>{{entry.averageAct}}</td>
 		</tr>
 		{% endfor %}
 </tbody>

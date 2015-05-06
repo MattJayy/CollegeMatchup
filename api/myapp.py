@@ -8,7 +8,7 @@ app = Flask(__name__, static_url_path='')
 
 
 
-def list_schools(gpa, sat=None, school_size= None, school_type= None):
+def list_schools(gpa, sat=None, school_size= None, school_type= None, act= None):
 	# open the json file to read only, 
 	# read all context in the file stored into str_ variable 
 	fo = open('school.json','r')
@@ -24,7 +24,13 @@ def list_schools(gpa, sat=None, school_size= None, school_type= None):
 	if sat == None or sat == '' :
 		sat_ = float(2400)
 	else:
-		sat_ = float(sat)	
+		sat_ = float(sat)
+	#
+	act_ = 0
+	if act ==None or act == '':
+		act_ = float(36)
+	else:
+		act_ = float(act)	
 
 	#
 	checkSize = False
@@ -44,7 +50,7 @@ def list_schools(gpa, sat=None, school_size= None, school_type= None):
 	# made str_ into a json data type (list of dictionaries)
 	new_list=[]
 	for x in schools_json:
-		if x['gpa'] <= gpa_ and x['sat'] <= sat_ :
+		if x['gpa'] <= gpa_ and x['sat'] <= sat_ and x['act'] <= act_  :
 #			print "The new list will be %s" %(x)
 			if checkSize == True:
 				if size_ == x['schoolSize']:
@@ -115,10 +121,12 @@ def handle_support_form():
 def handle_gpa_form():
 	gpa = request.form['gpa_gf']
 	sat = request.form['sat_gf']
+	act = request.form['act_gf']
 	school_type = request.form['type_gf']
 	size = request.form['size_gf']
+	
 
-	gpa_dict = {'gpa': gpa,'sat': sat, 'type': school_type,'size': size}
+	gpa_dict = {'gpa': gpa,'sat': sat,'act': act, 'type': school_type,'size': size }
 	#gpa_dict = {'gpa': gpa,'sat': sat}
 	gpa_json=json.dumps(gpa_dict)
 
@@ -130,8 +138,8 @@ def handle_gpa_form():
 	fo.close()	
 	new_list = []
 
-	print " gpa = %s, sat= %s, size = %s ,school_type = %s" %(gpa,sat,size,school_type)
-	new_list = list_schools(gpa,sat,size,school_type)
+	print " gpa = %s, sat= %s,act %s, size = %s ,school_type = %s" %(gpa,sat,act,size,school_type)
+	new_list = list_schools(gpa,sat,act,size,school_type)
 	
 	return render_template('template_table.html', schools=new_list)
 	
